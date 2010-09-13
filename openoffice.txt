@@ -1,0 +1,7 @@
+To work on these documents with the provided templates you will need to copy the templates into your open office user templates directory.
+
+On my machine that was located here:
+
+C:\Users\Jody\AppData\Roaming\OpenOffice.org\3\user\template
+
+When you open up any of these slides or documents it will prompt you if the template has changed (please say yes; if you say no the link between the two is forgotten and I do not know a way to restore it).
