@@ -111,7 +111,12 @@ The scope of uDig is to:
 	of community that exists around the code. Include a listing of third-party libraries 
 	and associated licenses.
  -->
- 
+
+Initial contribution made by the uDig Project Steering Committee. Code ownership is held
+by Refractions Research under the direction of the uDig Project Steering Committee. Additional
+"jgrass" plugins made available by HydroloGIS. This is an established development community with world wide representation, drawn from
+a number of organisations.
+
 <h2>Legal Issues</h2>
 
 <!-- 
@@ -121,7 +126,13 @@ The scope of uDig is to:
 	code available under some other license? Are there any LGPL/GPL bits that you
 	absolutely require?
  -->
- 
+
+The project includes "GeoTools" components of the Open Source Geospatial Foundation made available under
+an LGPL license. Other noted dependencies are the Java extensions JAI, ImageIO and ImageIO-Ext.
+
+The use of LGPL components has been negotiated with the LocationTech industry working group and
+does not represent an issue.
+
 <h2>Committers</h2>
 
 <!-- 
@@ -133,13 +144,15 @@ The scope of uDig is to:
 <p>The following individuals are proposed as initial committers to the project:</p>
 
 <dl>
-	<dt>Committer 1, Affiliation</dt>
-	<dd>Committer 1 is a committer on the *** project where he has made significant contributions over
-	many years. S/he will be contribute to the *** functionality in this new project.</dd>
-	<dt>Committer 2, Affiliation</dt>
-	<dd>Committer 2 has provided significant contributions to the existing code base. S/he will contribute
-	to the *** functionality in this new project.
-	</dd>
+	<dt>Jody Garnett, Open Source Geospatial Foundation, LISAsoft (steering committee)</dt>
+	<dd>Jody is a committer on the uDig project where he has made significant contributions
+	over many years. He will contribute to the architecture and direction of this new project.</dd>
+	<dt>Andrea Antonello, HydoloGIS (steering committee)</dt>
+	<dd>Andrea has provided significant contributions to the existing code base. He will contribute
+	scientific guidance and raster expertise to this new project</dd>
+	<dd>Jesse Eichar, Camptocamp (steering committee)</dd>
+	<dd>Mauricio Pazos (steering committee)</dd>
+	<dd>Frank Gasdorf (steering committee)</dd>
 </dl>
 
 <p>We welcome additional committers and contributions.</p>
@@ -148,6 +161,23 @@ The scope of uDig is to:
 	Describe any initial contributions of code that will be brought to the 
 	project. If there is no existing code, just remove this section.
  -->
+
+<p>
+<b>GIS Platform</b>: provides a local catalog of spatial services, with minimal Dublin Core details
+supplemented with a spatial extent. Each listed item implements <b>IResolve</b> operating in a
+similar fashion to <b>IAdaptable</b> with the additional expectation of both latency and IOErrors.
+Implementations are provided to work with a range of spatial services from popular file formats,
+through to spatial databases (such as PostGIS, DB2 and Oracle) and of Open Geospaital 
+Consortium web servies (Web Feature Server, Web Map Server).
+</p>
+<p>
+<b>GIS Application</b> provides an EMF model for Project, Map and Layer with an implementation
+of <b>MapViewer</b> to facilitate embedding a map component in RCP apps. This forms the core
+of the example uDig application we make available to show case the SDK capabilities.
+</p>
+<p>
+Additional contributions cover raster processing and analysis (ie JGrass), printing and integration.
+</p>
 
 <h2>Mentors</h2>
 
@@ -179,8 +209,10 @@ project:</p>
 expressed interest in this project:</p>
 
 <ul>
-	<li>Somebody, Affiliation</li>
-	<li>Somebody else, Affiliation</li>
+	<li>Refractions Research</li>
+	<li>HydroloGIS</li>
+	<li>LISAsoft</li>
+	<li>Open Source Geospatial Foundation</li>
 </ul>
 
 <h2>Project Scheduling</h2>
@@ -191,6 +223,17 @@ expressed interest in this project:</p>
 	should be expected, when your first build will be ready, etc. Exact
 	dates are not required.
  -->
+<p>
+This is a live project with responsibility to existing development teams, training courses, 
+and interaction with downstream projects (such as OSGeo Live DVD). It is our intension to
+transition as quickly as possible and promptly issue a release.
+</p>
+
+<ul>
+<li>Q3 2012: Complete transition to Tycho</li>
+<li>Q4 2012: Upgrade to Juno and transition to Eclipse build facilities</li>
+<li>Q1 2013: Initial release</li>
+</ul>
 
 <h2>Changes to this Document</h2>
 
@@ -206,7 +249,7 @@ expressed interest in this project:</p>
 		<th>Change</th>
 	</tr>
 	<tr>
-		<td>DD-Month-YYYY</td>
+		<td>28-August-2012</td>
 		<td>Document created</td>
 	</tr>
 </table>
