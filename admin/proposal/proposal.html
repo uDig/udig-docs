@@ -78,11 +78,61 @@ email list.</p>
 
 <!-- WTB: "Mapping" seems too generic and meaningless. Perhaps this is because I don't live in the space.
 What sorts of things does uDig enable users/adopters to do? -->
+<!-- JG: that is our traditional scope definition from the initial project plan. Let me try and 
+translate... 
+
+DESKTOP GIS
+Well frankly the goal is to build a Desktop GIS so I will write that down. The answer
+however will not help - since what a GIS does is simialr to what a word processor does. Different
+professionals will use the tool for different uses. The actual utility depends on the data
+being used. As an example the same network traversal functionality can be used for water managements,
+SCADA system planning, road maintenance, enivornmental analysis and so on.
+
+GIS Platform SDK
+We want to bundle up all this stuff for normal Eclipse RCP developers. Drop in GIS
+components with clear documented integration path for developers used to working on a normal
+buisness domain model. 
+
+LOCAL AND EXTERNAL DATA
+How to put this bluntly. GIS professionals are still not used to the internet, most of the web
+service standards die when presented with GIS data volumes. The fact that we consider both
+local and external data (let alone OGC standard support) is still fairly unusual.
+
+-->
 
 <ul>
-<li>Provide an Eclipse-based rich client mapping solution for desktop users</li>
-<li>Provide an SDK of mapping components for use in Eclipse RCP development</li>
-<li>Support mapping with local and external sources of spatial information</li>
+<li><b>Produce a Desktop Geographic Information System (GIS) using Eclipse RCP technology.</b>
+    A Desktop GIS application is a general purpose tool, similar to a wordprocessor, that can
+    be put to a wide range of uses. Often the only limitation is the ingenuity of the operator
+    and the data information they have available to work with.
+    <p>
+    The <a href="http://en.wikipedia.org/wiki/Geographic_information_system">Wikipedia entry for
+    Geographic Information System</a> provides the following:
+    <ul>
+    <li>Relating information from different sources</li>
+    <li>GIS uncertainties</li>
+    <li>Data Representation</li>
+    <li>Data Capture: ranging from digitisation to automated techniques</li>
+    <li>Raster to vector conversation</li>
+    <li>Projection, coordinate systems and registration</li>
+    <li>spatial analysis with GIS</li>
+    <li>Data output and Cartography</li>
+    <li>Graphical display and techniques</li>
+    <li>Spatial ETL</li>
+    <li>GIS Data Mining</li>
+    </ul>
+    </p>
+</li>
+    
+<li><b>Provide Eclipse RCP developers an SDK of GIS components.</b> Used by business applications
+    for integration spatial information, rendering or display servies, and in-depth spatial analysis.
+    Allow the business domain model to be extended with minimal background knowledge in mapping.
+    Enable business applications to add "just enough" GIS to get the job done.</li>
+<li><b>Enable integration of local and external spatial data sources</b>. The rich history, and unusual
+    size, of spatial data presents a great integration challenge. To be effective uDig must remain
+    data provider, and data format, neutral. Respecting where organisations store their
+    information while leveraging international (ISO TC211) and industry (OGC) standards for
+    interoperability.</li>
 </ul>
 
 <h2>Description</h2>
@@ -138,36 +188,73 @@ does not represent an issue.</p>
 	List any initial committers that should be provisioned along with the
 	new project. Include affiliation, but do not include email addresses at
 	this point.
+	
+	<dl>
+	<dt>Committer 1, Affiliation</dt>
+	<dd>Committer 1 is a committer on the *** project where he has made significant contributions over
+	many years. S/he will be contribute to the *** functionality in this new project.</dd>
+	<dt>Committer 2, Affiliation</dt>
+	<dd>Committer 2 has provided significant contributions to the existing code base. S/he will contribute
+	to the *** functionality in this new project.
+	</dd>
+	</dl>
  -->
 
 <p>The following individuals are proposed as initial committers to the project:</p>
 
 <!-- WTB: Do you expect steering committee members and other contributors to be committers?
 It's not clear from this text. -->
+<!-- See email list we could not make sense of this section, changing it back and
+grabbing our full comitters list from github -->
 
-<ul>
-  <li>Steering Committee
-    <dl>
-      <dt>Jody Garnett, Open Source Geospatial Foundation, LISAsoft</dt>
-      <dd>Jody is a committer on the uDig project where he has made significant contributions over many years. He will contribute to the architecture and direction of this new project.</dd>
-      <dt>Andrea Antonello, HydoloGIS</dt>
-      <dd>Andrea has provided significant contributions to the existing code base. He will contribute scientific guidance and raster expertise to this new project</p>
-      </dd>
-      <dt>Jesse Eichar, Camptocamp</dt>
-      <dt>Mauricio Pazos</dt>
-      <dt>Frank Gasdorf</dt>
-    </dl>
-  </li>
-  <li>Other Contributors
-    <dl>
-      <dt>Craig Taverner, AmanziTel</dt>
-      <dd>GSoC mentor for several projects to build support for the neo4j.org graph database spatial capabilities and bridges to GeoTools, uDig and GeoServer</dd>
-    </dl>
-      <dt>Davide Savazzi, AmanziTel</dt>
-      <dd>GSoC mentor for 2012 project to build support for routing tools in uDig using the neo4j.org graph database. Initial contributor to Neo4j Spatial and uDig plugin for Neo4j Spatial</dd>
-    </dl>
-  </li>
-</ul>
+<dl>
+  <dt>Jody Garnett, Open Source Geospatial Foundation, LISAsoft, PSC</dt>
+  <dd>Jody is a committer on the uDig project where he has made significant contributions over
+      many years. He will contribute to the architecture and direction of this new project.</dd>
+  <dt>Andrea Antonello, HydoloGIS, PSC</dt>
+  <dd>Andrea has provided significant contributions to the existing code base. He will
+      contribute scientific guidance and raster expertise to this new project.</dd>
+  <dt>Jesse Eichar, Camptocamp, PSC</dt>
+  <dd>Jesse Eichar has made significant contributions over many years, acting as project lead
+      for some of that time. Jesse keeps track of the rendering and tools plugins. PSC member.</dd>
+  <dt>Mauricio Pazos, PSC</dt>
+  <dd>Mauricio is a major contributor to the codebase with a deep understanding of the edit tool
+      framework.</dd>
+  <dt>Frank Gasdorf, PSC</dt>
+  <dd>Frank has played a strong role in the codebase most recently championing documentation,
+      translation and project OSGi packaging.</dd>
+  <dt>Craig Taverner, AmanziTel</dt>
+  <dd>GSoC mentor for several projects to build support for the neo4j.org graph database spatial
+      capabilities and bridges to GeoTools, uDig and GeoServer</dd>
+  <dt>Davide Savazzi, AmanziTel</dt>
+  <dd>GSoC mentor for 2012 project to build support for routing tools in uDig using the neo4j.org
+      graph database. Initial contributor to Neo4j Spatial and uDig plugin for Neo4j Spatial</dd>
+  <dt>Naz Chan, LISAsoft</dt>
+  <dd>Naz has recently completed the Document view, and is currently working on a Legend view.</dd>
+  <dt>Mark Leslie, LISAsoft</dt>
+  <dd>Mark longstanding contributor and initial author of the style editor. Mark brings the project
+      a background in Sphinx documentation generation and is available for uDig training courses.</dd>
+  <dt>John Hudson, LISAsoft</dt>
+  <dd>John has been making uDig plugins for several years and is focused on interoperability with
+      OGC web servies.</dd>
+  <dt>Sam Guymer, QPWS</dt>
+  <dd>Sam is a new addition to the community who has recently upgraded the version of Tycho
+      used and sorted out various build and packaging issues.</dd>
+</dl>
+
+The following developers have commit access but are not currently active:
+
+<dl>
+  <dt>Levi Puntna</dt>
+  <dd>Levi is responsible for the recent tool palette work.</dd>
+  <dt>Cliff Broadbent, QPWS</dt>
+  <dd>Cliff is responsible for the recent transition to the Tycho build system.</dd>
+  <dt>Scott Henderson, LISAsoft</dt>
+  <dd>Scott is responsible for the recent contribution of ExpressionViewer.</dd>
+  <dt>Paul Pfeiffer, QPWS</dt>
+  <dd>Paul is responsible for the recent Area of Interest work, and refactoring the core uDig
+      EMF model.</dd>
+</dl>
 
 <p>We welcome additional committers and contributions.</p>
 
@@ -179,8 +266,8 @@ It's not clear from this text. -->
  -->
 <p>The initial contribution will be made by the uDig Project Steering Committee. Code ownership is held
 by Refractions Research under the direction of the uDig Project Steering Committee. Additional
-"jgrass" plugins made available by HydroloGIS. This is an established development community with world wide representation, drawn from
-a number of organisations.</p>
+"jgrass" plugins made available by HydroloGIS. This is an established development community with
+world wide representation, drawn from a number of organisations.</p>
 
 <p>
 <b>GIS Platform</b>: provides a local catalog of spatial services, with minimal Dublin Core details
